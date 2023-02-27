@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginTest.css">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="container">
+        <div id="sign-up">
+            <h1 >Đăng kí tài khoản </h1>
+            <!-- information store -->
+            <div class="block-form-control">
+
+              <ul class="block-information">
+                <li> <label for="">Tên doanh nghiệp: </label>  <span class="text-red">(*)</span>  <input type="text"></li>
+                <li> <label for="">Mã số thuế: </label>  <span class="text-red">(*)</span>  <input type="text"></li>
+                <li> <label for="">Số điện thoại: </label>  <span class="text-red">(*)</span>  <input type="text"></li>
+                <li> <label for="">Ngành nghề:</label>  <span class="text-red">(*)</span>  
+                    <select name="" id="">
+                        <option value="">--Chọn ngành nghề--</option>
+                        <option value="">Kinh doanh thực phẩm </option>
+                        <option value="">Kinh doanh thức uống </option>
+                        <option value="">Khác</option>
+                    </select></li>
+              </ul>
+
+              <ul class="block-information">
+                <li>  <label for="">Fax:</label>  <input type="text"> </li>
+                <li>  <label for="">Email:</label> <span class="text-red">(*)</span> <input type="text"> </li>
+                <li>  <label for="">Website:</label>  <input type="text"> </li>
+                <li>  <label for="">Loại hình:</label> <span class="text-red">(*)</span>  </li>
+              </ul>
+
+            </div>
+            <h1> <ion-icon name="home-outline"></ion-icon>Địa chỉ</h1>
+            <div class="block-form-control">
+                <ul class="block-information">
+                    <li><label for="">Thành phố:  </label> <select name="" id="">
+                        <option value="">Đà nẵng</option>
+                    </select></li>
+                    <li> <label for="">Quận:</label><span class="text-red">(*)</span> <select name="" id="">
+                        <option value="">Ngũ Hành Sơn</option>
+                        <option value="">Thanh Khê</option>
+                        <option value="">Hòa Vang </option>
+                    </select></li>
+                </ul>
+                <ul class="block-information"> 
+                    <li> <label for="">Phường: </label> <span class="text-red">(*)</span> <select name="" id="">
+                        <option value="">Mỹ An</option> 
+                        <option value="">Khuê Mỹ</option> 
+                      </select> </li>
+                </ul>
+            </div>
+            <h1><ion-icon name="person-circle-outline"></ion-icon>Thông tin người đại diện </h1>
+            <div class="block-form-control">
+                <ul class="block-information">
+                    <li><label for="">Họ và tên:</label> <span class="text-red">(*)</span> <input type="text"> </li>
+                    <li><label for="">Chức vụ:</label> <span class="text-red">(*)</span> <input type="text"></li>
+                </ul>
+                <ul class="block-information">
+                    <li><label for="">Số điện thoại:</label> <span class="text-red">(*)</span> <input type="text"></li>
+                </ul>
+            </div>
+            <h1><ion-icon name="lock-closed-outline"></ion-icon>Mật khẩu</h1>
+            <div class="block-form-control">
+                <ul class="block-information">
+                    <li><label for="">Mật khẩu:</label> <span class="text-red">(*)</span> <input type="text"></li>
+                </ul>
+                <ul class="block-information">
+                    <li> <label for="">Xác nhận mật khẩu:</label> <span class="text-red">(*)</span> <input type="text"></li>
+                </ul>
+            </div>
+
+            
+        </div>
+       
+
+        <div class="submit-btn">
+            <button>Sign-up</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+    font-family: 'Ubuntu',sans-serif;
+}
+:root{
+    --darkcyan:darkcyan;
+    --white:#fff;
+    --grey:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+
+}
+body{
+   
+    overflow-x: hidden;
+}
+
+.container{
+position: relative;
+width: 100%;
+
+
+}
+ .navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+   background-color: #191C24 ;
+    transition: 0.5s;
+    overflow: hidden;
+  
+}
+.navigation.active{
+width: 60px;
+}
+.navigation ul{
+    position: absolute;
+  top: 190px;
+  width: 0;
+    width: 100%;
+}
+
+ .navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+   border-top-right-radius: 60px;
+   border-bottom-right-radius: 60px;
+   transition: all 0.2s;
+    
+}
+
+.navigation ul li:hover
+{
+    transition: 0.2s;
+    border-left: 5px solid red;
+   background-color: black;
+  
+} 
+
+ .navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.navigation ul li:hover a
+{
+    color: red
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul li:last-child a{
+    margin-top: 190px;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 24px;
+} 
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+} 
+/* main site */
+.main{
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    height: 1800px;
+   
+    background-color: black;
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.topbar{
+    width: 100%;
+    /* background-color:  linear-gradient(to bottom right, #141e30,#243b55); */
+    height: 60px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.toggle ion-icon{
+   
+    /* width: 40px;
+    height: 40px;
+    padding: 20px; */
+    font-size: 28px;
+    color: white;
+}
+
+
+
+.heading h1{
+    color: white;
+}
+.user{
+    position: relative;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+   
+    overflow: hidden;
+    cursor: pointer;
+}
+.user-infor-side-bar{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: flex;
+    
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+   
+    overflow: hidden;
+    cursor: pointer;
+}
+.user-infor-side-bar .img{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-infor-side-bar ion-icon{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+}
+.user-infor-side-bar .userInformation{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+
+.user .img{
+   background-color: transparent;
+   width: 40px;
+   height: 40px;
+   border: 1px solid white;
+   border-radius: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+.img ion-icon{
+    
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.user .userInformation{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+}
+
+
+/* card box */
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+}
+.cardBox .card{
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-width: 200px;
+   cursor: pointer;
+   border-radius: 20px;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+.cardBox .card .cardName{
+    color: #999;
+}
+.cardBox .card .iconBox{
+    font-size: 2.5em;
+    color: #03a9f4;
+}
+
+/* Details */
+.details{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+ 
+}
+.details .recentStores{
+    position: relative;
+    height: 570px;
+    min-width: 850px;
+    padding: 20px;
+    background-color:  #191C24;
+    border-radius: 20px;
+    
+}
+
+.details .cardHeader{
+  display: flex;
+  justify-content: space-between;
+}
+.details h2{
+    font-weight: 600;
+    color: white;
+}
+.details .btn{
+    padding: 5px 10px;
+    background-color: #003147;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+   
+}
+.details table thead{
+    font-weight: 600;
+}
+
+.details .recentStores table tbody tr{
+    /* border-bottom: 1px solid rgba(0,0,0,0.2); */
+  color: #6C7293;
+}
+.details .recentStores table thead tr td{
+    color: white;
+    border-bottom: 2px solid white;
+}
+.details .recentStores table tbody tr:hover{
+    background-image:  linear-gradient(to bottom right, #141e30,#243b55);
+    color: white;
+}
+.details .recentStores table tbody tr:last-child{
+    border-bottom: none;
+}
+.details .recentStores table td{
+    padding: 9px 6px;
+    max-width:150px ;
+    border: 1px solid black;
+}
+.details .recentStores table tbody tr td:last-child{
+    text-align: right;
+}
+.details .recentStores table thead tr td:last-child{
+    text-align: right;
+}
+
+
+.statusPause{
+    position: relative;
+    padding: 5px 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 300px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    background-color: rgb(202, 85, 85);
+}
+.statusActive{
+    position: relative;
+    padding: 5px 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 300px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    background-color: rgb(68, 174, 68);
+}
+
+/* recent customer  */
+.details .recentCustomers{
+    position: relative;
+    border-radius:20px ;
+    height: 570px;
+    min-width: 350px;
+    padding: 20px;
+    background-color:  #191C24;
+}
+.details .recentCustomers .imgBox{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.details .recentCustomers .imgBox ion-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.details .recentCustomers table tr:hover,
+.details .recentCustomers table tr:hover td h4 span{
+    background-image:  linear-gradient(to bottom right, #141e30,#243b55);
+    color: white;
+}
+.details .recentCustomers table tr td{
+ padding: 7px 10px;
+}
+.details .recentCustomers table tr td h4{
+font-size: 16px;
+font-weight: 500;
+line-height: 1.2em;
+color: rgb(108, 114, 147);
+}
+.details .recentCustomers table tr td span{
+    font-size: 14px;
+    color: #999;
+}
+
+/* pagenation */
+.pagenation-area{
+    position: absolute;
+   bottom: 20px;
+    right: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagenation-list{
+    
+    position: relative;
+   
+    /* top: 200px;
+    right: 20px; */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    list-style: none;
+    font-size: 1.2rem;
+}
+.pagenation-list li{
+    list-style: none;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #003147;
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+.pagenation-list li.active{
+background-color: #003147;
+color: white;
+}
+.pagenation-list li:hover{
+    background-color: #003147;
+    color: white;
+}
+.pagenation-list li .btnNextPage{
+    background-color: #003147;
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+}
+.pagenation-list li .btnNextPage ion-icon{
+    text-align: center;
+
+}
+.pagenation-list li .btnPreviousPage{
+    background-color: #003147;
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+}
+.pagenation-list li .btnPreviousPage ion-icon{
+    text-align: center;
+
+}
+
