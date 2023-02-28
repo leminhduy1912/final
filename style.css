@@ -49,7 +49,7 @@ width: 60px;
    border-top-right-radius: 60px;
    border-bottom-right-radius: 60px;
    transition: all 0.2s;
-    
+  
 }
 
 .navigation ul li:hover
@@ -67,7 +67,7 @@ width: 60px;
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: var(--white);
+    color: #6C7293;
     font-size: 18px;
 }
 
@@ -92,6 +92,7 @@ width: 60px;
 }
 .navigation ul li a .icon ion-icon{
     font-size: 24px;
+    color: red;
 } 
 
 .navigation ul li a .title{
@@ -142,13 +143,13 @@ width: 60px;
     height: 40px;
     padding: 20px; */
     font-size: 28px;
-    color: white;
+    color: red;
 }
 
 
 
 .heading h1{
-    color: white;
+    color: #6C7293;
 }
 .user{
     position: relative;
@@ -196,7 +197,7 @@ width: 60px;
     position: absolute;
     right: 10px;
     top: 10px;
-    color: white;
+    color: #6C7293;
 }
 
 .user .img{
@@ -220,7 +221,7 @@ width: 60px;
     position: absolute;
     right: 10px;
     top: 10px;
-    color: white;
+    color: #6C7293;
 }
 
 
@@ -238,11 +239,11 @@ width: 60px;
 }
 .cardBox .card{
     position: relative;
-    background-color: #fff;
+    background-color:  #191C24;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    min-width: 200px;
+    min-width: 230px;
    cursor: pointer;
    border-radius: 20px;
 }
@@ -251,14 +252,17 @@ width: 60px;
     position: relative;
     font-size: 2em;
     font-weight: 500;
+    color: white;
 }
 .cardBox .card .cardName{
-    color: #999;
+    color: #6C7293;
 }
 .cardBox .card .iconBox{
     font-size: 2.5em;
-    color: #03a9f4;
+    color: red;
+    
 }
+
 
 /* Details */
 .details{
@@ -331,7 +335,7 @@ width: 60px;
     text-align: right;
 }
 .details .recentStores table thead tr td:last-child{
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -434,6 +438,7 @@ color: rgb(108, 114, 147);
     border: 1px solid #003147;
     border-radius: 5px;
     margin: 0px 5px;
+    color: #6C7293;
 }
 .pagenation-list li.active{
 background-color: #003147;
