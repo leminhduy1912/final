@@ -5,12 +5,12 @@
     font-family: 'Ubuntu',sans-serif;
 }
 :root{
-    --darkcyan:darkcyan;
+   --blue:#2984FF;
     --white:#fff;
     --grey:#f5f5f5;
     --black1:#222;
     --black2:#999;
-
+       --red:#F47174;
 }
 body{
    
@@ -27,9 +27,11 @@ width: 100%;
     position: fixed;
     width: 250px;
     height: 100%;
-   background-color: #191C24 ;
+   background-color: #fff;
     transition: 0.5s;
     overflow: hidden;
+  display: flex;
+  flex-direction: column;
   
 }
 .navigation.active{
@@ -46,19 +48,13 @@ width: 60px;
     position: relative;
     width: 100%;
     list-style: none;
-   border-top-right-radius: 60px;
-   border-bottom-right-radius: 60px;
-   transition: all 0.2s;
   
+   transition: all 0.2s;
+   
+
 }
 
-.navigation ul li:hover
-{
-    transition: 0.2s;
-    border-left: 5px solid red;
-   background-color: black;
-  
-} 
+
 
  .navigation ul li a
 {
@@ -68,13 +64,20 @@ width: 60px;
     display: flex;
     text-decoration: none;
     color: #6C7293;
-    font-size: 18px;
+    font-size: 15px;
+    border-radius: 50px;
 }
 
 .navigation ul li:hover a
 {
-    color: red
+    transition: all 0.4s;
+   background-color: var(--blue);
+   color: #fff;
 }
+.navigation ul li:hover .icon ion-icon{
+    color: #fff;
+}
+
 
 .navigation ul li a .icon
 {
@@ -92,7 +95,7 @@ width: 60px;
 }
 .navigation ul li a .icon ion-icon{
     font-size: 24px;
-    color: red;
+    color: #6C7293;
 } 
 
 .navigation ul li a .title{
@@ -111,7 +114,7 @@ width: 60px;
     left: 250px;
     height: 1800px;
    
-    background-color: black;
+   background-color: #e5e5e5;
     transition: 0.5s;
 }
 .main.active{
@@ -126,6 +129,7 @@ width: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--blue)
 }
 .toggle{
     position: relative;
@@ -139,17 +143,27 @@ width: 60px;
 }
 .toggle ion-icon{
    
-    /* width: 40px;
-    height: 40px;
-    padding: 20px; */
+ 
     font-size: 28px;
-    color: red;
+    color: #fff
 }
 
 
-
+.logo{
+width: 100%;
+position: relative;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 2px solid rgb(180, 180, 180);
+}
+.logo ion-icon{
+    padding: 5px;
+    color: var(--blue);
+}
 .heading h1{
-    color: #6C7293;
+    color: #fff;
 }
 .user{
     position: relative;
@@ -163,42 +177,7 @@ width: 60px;
     overflow: hidden;
     cursor: pointer;
 }
-.user-infor-side-bar{
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    display: flex;
-    
-    justify-content: flex-start;
-    align-items: center;
-    width: 150px;
-    height: 50px;
-   
-    overflow: hidden;
-    cursor: pointer;
-}
-.user-infor-side-bar .img{
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    border: 1px solid white;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.user-infor-side-bar ion-icon{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 0;
-}
-.user-infor-side-bar .userInformation{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #6C7293;
-}
+
 
 .user .img{
    background-color: transparent;
@@ -221,7 +200,7 @@ width: 60px;
     position: absolute;
     right: 10px;
     top: 10px;
-    color: #6C7293;
+    color: white;
 }
 
 
@@ -230,38 +209,93 @@ width: 60px;
 .cardBox{
     position: relative;
     width: 100%;
-    
+    height: 160px;
+    background-color: #e5e5e5;
     padding: 20px;
     display: flex;
     justify-content: space-around;
-    
     flex-wrap: wrap;
 }
-.cardBox .card{
+
+.card{
     position: relative;
-    background-color:  #191C24;
+   
+   border-radius: 20px;
+    min-width: 230px;
+    min-height: 130px;
+    overflow: hidden;
+}
+.card ion-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+.card .card-header{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    min-width: 230px;
-   cursor: pointer;
-   border-radius: 20px;
+    align-items: center;
+    height: 75%;
+    /* background-color: #b9b8b8; */
+    background-image: linear-gradient(#d9dce0,#469fe3);    
+}
+.card .card-information{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.card .card-information .card-name{
+font-size: 20px;
+line-height: 30px;
+color: black;
+}
+.card .card-information .card-numb{
+    position: relative;
+   text-align: start;
+    
+
+}
+.card .card-information .card-numb span{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+.card .card-information .card-numb ion-icon .increase{
+    color: green;
 }
 
-.cardBox .card .numbers{
+.card .card-header .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    font-size: 2em;
+    width: 30px;
+    height: 30px;
+}
+.card .card-header ion-icon{
+    font-size: 24px;
     font-weight: 500;
-    color: white;
 }
-.cardBox .card .cardName{
-    color: #6C7293;
+
+.card .card-footer{
+    position: relative;
+    height: 25%;
+    bottom: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: #fff     ;
 }
-.cardBox .card .iconBox{
-    font-size: 2.5em;
-    color: red;
-    
+.card-footer span,.card-footer span{
+    margin: auto 5px;
+
 }
+
+
 
 
 /* Details */
@@ -279,7 +313,7 @@ width: 60px;
     height: 570px;
     min-width: 850px;
     padding: 20px;
-    background-color:  #191C24;
+    background-color:  #fff;
     border-radius: 20px;
     
 }
@@ -290,7 +324,7 @@ width: 60px;
 }
 .details h2{
     font-weight: 600;
-    color: white;
+    color: black;
 }
 .details .btn{
     padding: 5px 10px;
@@ -314,13 +348,14 @@ width: 60px;
 .details .recentStores table tbody tr{
     /* border-bottom: 1px solid rgba(0,0,0,0.2); */
   color: #6C7293;
+  text-align: center;
 }
 .details .recentStores table thead tr td{
-    color: white;
-    border-bottom: 2px solid white;
+    color: black;
+
 }
 .details .recentStores table tbody tr:hover{
-    background-image:  linear-gradient(to bottom right, #141e30,#243b55);
+    background-color:var(--blue);
     color: white;
 }
 .details .recentStores table tbody tr:last-child{
@@ -332,7 +367,7 @@ width: 60px;
     border: 1px solid black;
 }
 .details .recentStores table tbody tr td:last-child{
-    text-align: right;
+    text-align: center;
 }
 .details .recentStores table thead tr td:last-child{
     text-align: center;
@@ -347,7 +382,7 @@ width: 60px;
     border-radius: 6px;
     font-weight: 300px;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgb(202, 85, 85);
 }
 .statusActive{
@@ -369,7 +404,7 @@ width: 60px;
     height: 570px;
     min-width: 350px;
     padding: 20px;
-    background-color:  #191C24;
+    background-color:  #fff;
 }
 .details .recentCustomers .imgBox{
     position: relative;
@@ -383,11 +418,14 @@ width: 60px;
     left: 0;
     width: 100%;
     height: 100%;
-    color: white;
+    color: rgb(228, 228, 228);
 }
 .details .recentCustomers table tr:hover,
 .details .recentCustomers table tr:hover td h4 span{
-    background-image:  linear-gradient(to bottom right, #141e30,#243b55);
+   background-color: var(--blue);
+    
+}
+.details .recentCustomers table tr:hover h4{
     color: white;
 }
 .details .recentCustomers table tr td{
